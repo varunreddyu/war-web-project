@@ -49,7 +49,7 @@ spec:
           sh """
              ls -a && pwd 
              mvn clean install
-             cp -r target/* ../
+             cp -r target/* .
           """
         }
       }
