@@ -35,7 +35,7 @@ spec:
     - cat
     tty: true
   - name: kubectl
-    image: golang:1.10
+    image: google/cloud-sdk
     command:
     - cat
     tty: true
@@ -64,6 +64,8 @@ spec:
     stage('Deploy Dev') {
       steps {
         container('kubectl') {
+          sh "gcloud auth list"
+          sh "kubectl --help "
          
         }
       }
