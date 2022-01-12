@@ -64,8 +64,8 @@ spec:
     stage('Deploy Dev') {
       steps {
         container('kubectl') {
-          sh "gcloud auth list"
-          sh "kubectl --help "
+          sh "gcloud container clusters get-credentials helm --zone us-central1-c --project focus-tree-329108"
+          sh "kubectl apply -f deployment.yaml "
          
         }
       }
