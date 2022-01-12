@@ -25,7 +25,7 @@ spec:
  # serviceAccountName: cd-jenkins
   containers:
   - name: maven-bld
-    image: maven
+    image: maven:amazoncorretto
     command:
     - cat
     tty: true
