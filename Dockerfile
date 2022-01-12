@@ -1,4 +1,4 @@
-FROM gcr.io/inner-synapse-329515/tomcat:latest
-COPY wwp-1.0.0.war /home/apache-tomcat-8.5.73/webapps
+FROM  gcr.io/focus-tree-329108/yellow
+COPY wwp-1.0.0.war /opt/tomcat/webapps
 EXPOSE 8080
-CMD ["/home/apache-tomcat-8.5.73/bin/catalina.sh", "run"]
+CMD ["/opt/tomcat/bin/catalina.sh","run"]
